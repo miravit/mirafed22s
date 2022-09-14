@@ -1,0 +1,80 @@
+.container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside {
+    background-color: pink;
+    
+    
+}
+
+main {
+    background-color: purple;
+        
+    
+}
+
+section{
+    background-color: palevioletred;
+    
+}
+.bild {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 300px;
+    border-radius: 50%;
+    border: 3px dotted;
+    
+    
+}
+.gridcontainer{
+    background-color: coral;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center
+}
+.grid-item1 {
+    width: 20px;
+}
+
+
+@media screen and (min-width:768px){
+    .container {
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+}
+aside {
+        background-color: pink;
+        width:33.33%;
+        height: 150px;
+        
+}
+    
+main {
+        background-color: purple;
+        width:33.33%;
+        height: 150px;
+}
+    
+section{
+        background-color: palevioletred;
+        width:33.33%;
+        height: 150px;
+}
+}
