@@ -1,0 +1,68 @@
+body {
+    margin: 0; /*tar bort lilla marginalen i bodyn*/
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+}
+
+.wide {
+    display: none; /*visas ej i mobilläge*/
+    /*visability: hidden; tar bort i html så det är inte jättebra*/
+}
+
+.container > * { /* alla som är större*/
+    height: 100vh;
+}
+
+.container aside {
+    width: 100%;
+    background-color: #FAF6F5;
+}
+
+.container main {
+    width: 100%;
+    background-color: pink;
+}
+
+.container section {
+    width: 100%;
+    background-color:orange;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .container aside {
+        width: 20%;
+        background-color: purple;
+    }
+    
+    .container main {
+        width: 70%;
+        background-color: #FAF6F5;
+    }
+    
+    .container section {
+        width: 10%;
+        background-color:orange;
+    }
+    .wide {
+        display: block;
+        width: 100%;
+        height: 400px;
+        background-image: url(./../bilder/cardinal-ge7d03e2b2_1920.jpg);
+        background-size:cover; /* finns även contain men då lämnas vitt */
+        background-repeat: no-repeat; /* repetera inte bilden*/
+        /*background-position: left; bestämmer vart det vita ska placeras ifall jaf valt contain*/
+    }
+    
+}
+

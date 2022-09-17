@@ -1,3 +1,5 @@
+
+
 .container {
     border: 2px solid black;
     display: flex;
@@ -26,14 +28,68 @@ section{
     align-items: center;
     justify-content: center;
 }
+.välkommen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 img {
     width: 300px;
     border-radius: 50%;
     border: 3px dotted;
+  
+  }
+  @keyframes heart {
+    0% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    5% {
+      transform: rotate(45deg) scale(0.9);
+    }
+    10% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    15% {
+      transform: rotate(45deg) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    100% {
+      transform: rotate(45deg) scale(0.8);
+    }
+  }
+
+  .heart{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: black;
+    animation: heart 1.5s infinite;
+  }
+
+  .heart::before,
+  .heart::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+
+  }
+  .heart::before {
+    left: -25px;
+  }
+  
+  .heart::after {
+    top: -25px;
+  }
     
     
-}
+
 .gridcontainer{
     background-color: coral;
     display: grid;
@@ -75,4 +131,32 @@ section{
         width:33.33%;
         height: 150px;
 }
+
+}
+
+@keyframes goaround1 {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(200px, 0);
+    }
+  }
+  @keyframes goaround2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(200px,0px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+  
+    
+  }
+  
+ h1 {
+        animation: goaround2 1s;
+       
 }
